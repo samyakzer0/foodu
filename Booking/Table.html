@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="Table.css">
+    <title>Table</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="previous">
+          <a href="../User/user.html" class="back-link">
+            <span><i class="fa-solid fa-angle-left"></i>Back</span>
+        </a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search Seat...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="profile">
+            <i class="fas fa-user"></i>
+        </div>
+    </nav> 
+
+    <div class="booking-wrapper">
+        <main class="white-box">
+            <div class="left-side">
+                <div class="confirm-box">
+                    <h2>Reservation Details</h2>
+                    <section class = "booking-info">
+                        <div class = "selected-seats">
+                            <h3>Selected Table/Seats </h3>
+                            <div class ="selected-list">
+                            <div class = "selected">T2</div>
+                            </div>  
+                        </div>
+                        <div class = "time-slots">
+                            <h3>Time Slot</h3>
+                            <div class = "time-options">
+                                <div class = "time-option">6:00 PM</div>
+                                <div class = "time-option">7:00 PM</div>
+                                <div class = "time-option">8:00 PM</div>
+                                <div class = "time-option">9:00 PM</div>
+                            </div>
+                        </div>
+
+                        <div class = "special-requests">
+                            <h3>Special Requests</h3>
+                            <textarea placeholder="Any special requests?"></textarea>
+                        </div>
+                    </section>
+                </div>
+               <a href="../Checkout/checkout.html"> <button class="confirm-btn">Confirm Booking</button></a>
+            </div>
+
+            <div class="right-side">
+                <div class="header-with-legend">
+                    <h3>Select Preferred Seating</h3>
+                    <div class="legend">
+                        <div class="legend-item">
+                            <div class="legend-color available"></div>
+                            <span>Available</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color selected"></div>
+                            <span>Selected</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color occupied"></div>
+                            <span>Occupied</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="area">
+                    <div class="dining-area">
+    <div class="column1">
+        <div class="seating-arrangement">
+            <div class="seat available"></div>
+            <div class="table two-seater available">T1</div>
+            <div class="class seat available"></div> </div>
+
+        <div class="seating-arrangement">
+            <div class="seat selected"></div>
+            <div class="table two-seater selected">T2</div>
+            <div class="seat selected"></div>
+        </div>
+    </div>
+
+    <div class="column2">
+        <div class="seating-arrangement">
+
+            <div class="four-seater">
+            <div class="seat available"></div>
+            <div class="seat available"></div>
+            </div>
+
+            <div class="table four-seater available">T3</div>
+
+            <div class="four-seater">
+            <div class="seat available"></div>
+            <div class="seat available"></div>
+            </div>
+        </div>
+
+        <div class="seating-arrangement">
+
+            <div class="four-seater">
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            </div>
+
+            <div class="table four-seater occupied">T3</div>
+
+            <div class="four-seater">
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
