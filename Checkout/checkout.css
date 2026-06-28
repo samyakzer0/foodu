@@ -1,3 +1,15 @@
+
+body {
+    font-family: sans-serif;
+    padding: 0 22px;
+    color: #2b2b2b;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcxQUN214jDRCTRXk5QX7PsAewwh30mERt0bUp_Vo9pA&s=10");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -5,20 +17,17 @@
     padding: 16px 0;
 }
 
-body {
-    font-family: sans-serif;
-    padding: 0 22px;
-    color: #2b2b2b;
-}
-
-
-.previous {
+.previous, .profile {
     display: flex;
     align-items: center;
-    padding: 8px 12px;
+    padding: 8px 16px;
     background-color: #F4C430;
     border-radius: 24px;
     cursor: pointer;
+}
+
+.back-link {
+    text-decoration: none;
 }
 
 .previous span {
@@ -27,25 +36,16 @@ body {
     display: flex;
     align-items: center;
     gap: 6px;
-}
-
-.back-link {
-    text-decoration: none;
+    font-weight: 600;
 }
 
 .checkout-title h2 {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 800;
     color: #b73a06;
+    margin: 0;
 }
 
-.profile {
-    display: flex;
-    align-items: center;
-    background-color: #F4C430;
-    padding: 8px 12px;
-    border-radius: 24px;
-}
 
 .checkout-section {
     display: flex;
@@ -56,13 +56,12 @@ body {
 
 .white-box {
     background-color: #fbf9f4;  
-    width: 700px;
+    width: 750px;
     padding: 40px;  
-       display: flex;          
+    display: flex;          
     border-radius: 20px;        
     border: 1px solid #2b2b2b;  
-    gap: 50px;
-    justify-content: center;;
+    gap: 40px;
 }
 
 .details, .payment {
@@ -72,52 +71,128 @@ body {
 }
 
 h2 {
+    font-size: 20px;
     font-weight: 800;
     margin-top: 0;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     color: #2b2b2b;
 }
-
 
 .card {
     background-color: #fbf9f4;
     border: 1px solid #2b2b2b;
     border-radius: 16px;
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-sizing: border-box;
 }
-
-.booking .tablenumber{
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between;
-    align-items: center;;
-}
-
-.booking .tablenumber{
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between;
-    align-items: center;;
-}
-
-.name{
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between;
-    align-items: center;;
-}
-
-.amount{
-     display:flex;
-    flex-direction:row;
+.detail-row {
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.amount h2{
-    color:#b73a06;
-    align-items: center;
-    margin-top : 6px;;
-    font-size: 20px;
+.detail-row h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #666;
 }
 
+.detail-row p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+.amount-row h3 {
+    color: #2b2b2b;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.amount-row h2 {
+    color: #b73a06;
+    font-size: 22px;
+    margin: 0;
+}
+
+
+.qr-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qr-code {
+    width: 140px;
+    height: 140px;
+    background-color: #fffdf9;
+    border: 1px dashed #2b2b2b;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-code i {
+    font-size: 140px;
+    color: #2b2b2b;
+}
+
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.upi-input {
+    display: flex;
+    gap: 8px;
+}
+
+.upi-input input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #2b2b2b;
+    border-radius: 8px;
+    background-color: #fffdf9;
+    font-size: 14px;
+    color: #2b2b2b;
+    outline: none;
+}
+
+
+.verify-btn {
+    background-color: #F4C430;
+    color: black;
+    border: 1px dashed #2b2b2b;
+    padding: 0 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.pay-btn {
+    background-color: #b73a06;
+    color: white;
+    border: 1px solid #2b2b2b;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: background 0.2s ease;
+}

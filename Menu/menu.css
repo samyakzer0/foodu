@@ -1,6 +1,9 @@
 body{
     font-family: sans-serif;
     padding: 0 22px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcxQUN214jDRCTRXk5QX7PsAewwh30mERt0bUp_Vo9pA&s=10");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -93,7 +96,7 @@ body{
 
 .side-button{
     background-color: #ffffff;
-    border: 1px solid #e3dec9;
+    border: 1px dashed #e3dec9;
     border-radius:16px;
     padding: 12px 14px;
     cursor: pointer;
@@ -103,7 +106,7 @@ body{
 .side-button.active {
     background-color: #b73a06;
     border: 2px solid #000000;
-    color: #e3dec9
+    color: #e3dec9;
 }
 
 .menu-items{

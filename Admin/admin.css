@@ -1,0 +1,83 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body{
+background-color:#fbf9f4;
+color: #2b2b2b;
+font-family: sans-serif;
+padding: 0 22px;
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcxQUN214jDRCTRXk5QX7PsAewwh30mERt0bUp_Vo9pA&s=10");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-logo {
+    height: 80px;     
+    width: 80px;     
+    margin-top: -10px;  
+    cursor: pointer; 
+    padding-left: 18px; 
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    background-color: #efefe9;
+    border-radius: 24px;
+    overflow: hidden;
+    outline: 1px solid #e3dec9;
+}
+
+.search button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.search input {
+    width: 100%;
+    padding: 14px 14px;
+    border:none;
+    outline: none;
+    background: transparent;
+    color: #333333;
+}
+
+.search button:hover {
+    color: #b73a06;
+    outline:none;
+    background-color: transparent;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: #f3b431;
+    padding: 8px 12px;
+    border-radius: 24px;
+}
+
+.profile:hover {
+    border: 1px solid #2b2b2b;
+    border-radius: 24px;
+    background-color: #fbf9f4
+}
+
+.profile i {
+    color: #000000;
+}
+

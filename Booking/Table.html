@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="Table.css">
+    <script src="Table.js" defer></script>
     <title>Table</title>
 </head>
 <body>
@@ -32,7 +33,7 @@
                         <div class = "selected-seats">
                             <h3>Selected Table/Seats </h3>
                             <div class ="selected-list">
-                            <div class = "selected">T2</div>
+                            <div class = "selected-table">T2</div>
                             </div>  
                         </div>
                         <div class = "time-slots">
@@ -51,7 +52,7 @@
                         </div>
                     </section>
                 </div>
-               <a href="../Checkout/checkout.html"> <button class="confirm-btn">Confirm Booking</button></a>
+             <button class="confirm-btn">Confirm Booking</button>
             </div>
 
             <div class="right-side">
@@ -79,12 +80,12 @@
         <div class="seating-arrangement">
             <div class="seat available"></div>
             <div class="table two-seater available">T1</div>
-            <div class="class seat available"></div> </div>
+            <div class="seat available"></div> </div>
 
         <div class="seating-arrangement">
-            <div class="seat selected"></div>
-            <div class="table two-seater selected">T2</div>
-            <div class="seat selected"></div>
+            <div class="seat available"></div>
+            <div class="table two-seater available">T2</div>
+            <div class="seat available"></div>
         </div>
     </div>
 
@@ -111,7 +112,7 @@
             <div class="seat occupied"></div>
             </div>
 
-            <div class="table four-seater occupied">T3</div>
+            <div class="table four-seater occupied">T4</div>
 
             <div class="four-seater">
             <div class="seat occupied"></div>

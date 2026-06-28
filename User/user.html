@@ -29,9 +29,25 @@
         <h1>FIND YOUR PERFECT TABLE</h1>
     </div>
     
-    <a href="../Booking/Table.html" class="book-now-link">
+   
         <button class="book-btn">Book Now</button>
-    </a>
+
+         <script>
+
+const button1 = document.querySelector('.bento.hero button ');
+
+           button1.addEventListener('click', () => {
+        window.location.href = '../Booking/Table.html';
+    });
+
+    button1.addEventListener("mouseenter", function() {
+        button1.style.transform = "scale(1.1)";
+    });
+
+    button1.addEventListener("mouseleave", function() {
+        button1.style.transform = "scale(1)";         
+    });
+        </script>
     
     <img src="dining.png" alt="Dining Illustration" class="table-img">
 </div>
@@ -41,10 +57,23 @@
         <section class="bento right-top">
     <div class="content">
         <h2>SPECIAL OFFERS</h2> 
-        
-        <a href="../Menu/menu.html">
             <button>Explore</button>
-        </a>
+        <script>
+
+const button = document.querySelector('.bento.right-top button ');
+
+           button.addEventListener('click', () => {
+        window.location.href = '../Menu/menu.html';
+    });
+
+    button.addEventListener("mouseenter", function() {
+        button.style.transform = "scale(1.1)";
+    });
+
+    button.addEventListener("mouseleave", function() {
+        button.style.transform = "scale(1)";         
+    });
+        </script>
     </div>
 </section>
  

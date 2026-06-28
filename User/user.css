@@ -9,6 +9,9 @@ background-color:#fbf9f4;
 color: #2b2b2b;
 font-family: sans-serif;
 padding: 0 22px;
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcxQUN214jDRCTRXk5QX7PsAewwh30mERt0bUp_Vo9pA&s=10");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .logo-section {
@@ -97,7 +100,7 @@ padding: 0 22px;
 
 .bento-section .bento {
     background-color: #ffffff;
-    border: 1px solid #e3dec9;     
+    border: 3px dashed orange;     
     border-radius: 15px;            
     padding: 23px;
 }
@@ -107,7 +110,9 @@ padding: 0 22px;
     align-items: flex-end;
     position: relative; 
     overflow: hidden; 
+    box-shadow: 4px 4px 4px orange;
 }
+
 
 .table-img {
     position: absolute;
@@ -135,6 +140,7 @@ padding: 0 22px;
     background-position: center;
     background-repeat: no-repeat;
     background-position: right center;
+    border: 2px solid white;
 }
 
 .right-top .content {
@@ -180,7 +186,7 @@ padding: 0 22px;
     margin-top: 15px;
     padding: 9px 19px;
     background-color: #f3b431;
-    border: 1px solid #2b2b2b;
+    border: 1px dashed #2b2b2b;
     border-radius: 23px;
     cursor: pointer;
     font-size: 15px;
