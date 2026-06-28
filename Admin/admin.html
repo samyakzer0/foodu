@@ -3,23 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="admin.css">
-    <title>Document</title>
+    <title>Admin Dashboard</title>
 </head>
 <body>
-      <nav class = "navbar">
-    <div class="logo-section">
-    <img src="logo.png" alt="FoodU Logo" class="nav-logo">
-</div>
-    <div class="search">
-      <input type="text" placeholder="Search food...">
-      <button><i class="fas fa-search"></i></button>
-    </div>
-
-    <div class="profile">
-      <a href="../SignUp/Signup.html"><i class="fas fa-user"></i></a>
-    </div>
+   <nav class="navbar">
+        <div class="logo-container">
+            <a href="../User/user.html"><img src="logo.png" alt="FoodU Logo" class="nav-logo"></a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search analytics...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="profile">
+           <a href="../SignUp/Signup.html"><i class="fas fa-user"></i></a>
+        </div>
    </nav> 
+
+   <main class="dashboard">
+        <div class="container">
+            <section class="box chart">
+                <div class="content">
+                    <h2>Category Earnings</h2>
+                    <img src="https://docs.oracle.com/javafx/2/charts/img/pie-sample.png" class="pie-chart">
+                </div>
+            </section>
+     
+            <div class="right-column">
+                <section class="box graph">
+                    <div class="content">
+                        <h2>Monthly Revenue</h2> 
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_oqDY8uCSXlAUQsYk4Sle0A39j7IvgyYdzryw42AA3A&s=10">
+                    </div>
+                </section>
+         
+                <section class="box orders">
+                    <div class="content">
+                        <h2>Recent Orders</h2>
+                        <ul class="recent-orders-list">
+                            <li><span>#1024 - Paneer Tikka</span> ₹249</li>
+                            <li><span>#1023 - Paneer Butter Masala</span> ₹120</li>
+                            <li><span>#1022 - Gulab Jamun</span> ₹180</li>
+                            <li><span>#1021 - Spring Rolls</span> ₹180</li>
+                            <li><span>#1020 - Dal Makhni & Naan</span> ₹320</li>
+                            <li><span>#1024 - Paneer Tikka</span> ₹249</li>
+                            <li><span>#1023 - Paneer Butter Masala</span> ₹120</li>
+                            <li><span>#1022 - Gulab Jamun</span> ₹180</li>
+                            <li><span>#1021 - Spring Rolls</span> ₹180</li>
+                            <li><span>#1020 - Dal Makhni & Naan</span> ₹320</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+   </main>
 </body>
 </html>

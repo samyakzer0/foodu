@@ -13,7 +13,7 @@ body{
     align-items: center;
 }
 
-.logo-section {
+.logo-section a {
     display: flex;
     align-items: center;
     justify-content: center;
