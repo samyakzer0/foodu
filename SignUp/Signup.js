@@ -1,5 +1,16 @@
-const button = document.querySelector(".signup-button");
+const signUpform = document.getElementById("signupForm");
 
-button.addEventListener("click", function() {
- alert("Sign Up Successful! Welcome to FoodU.");
+signUpform.addEventListener("submit", function(submitEvent) {
+    submitEvent.preventDefault();
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+
+    const emailValue = emailInput.value.trim();
+    const passwordValue = passwordInput.value.trim();
+
+    if (emailValue === "" || passwordValue === "") {
+        alert("Fill all fields please.");
+        return;
+    }
+    window.location.href = "../Admin/admin.html";
 });

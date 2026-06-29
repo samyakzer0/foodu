@@ -75,6 +75,10 @@ body{
     width:100%;
 }
 
+form .input-field {
+    gap:18px;
+}
+
  h1{
     font-weight:1200px;
     font-size:60px;
