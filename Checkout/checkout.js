@@ -29,12 +29,17 @@ upiForm.addEventListener("submit", function(submitEvent) {
 document.addEventListener("DOMContentLoaded", () => {
     const savedTable = localStorage.getItem('selectedTable');
     const savedTime = localStorage.getItem('selectedTime');
-    
+    const savedDeposit = localStorage.getItem('depositAmount');
+
     if (savedTable) {
         document.getElementById('summary-table').textContent = savedTable;
     }
     if (savedTime) {
         document.getElementById('summary-time').textContent = savedTime;
+    }
+
+    if (savedDeposit) {
+    document.getElementById('summary-deposit').textContent = savedDeposit;
     }
 });
 

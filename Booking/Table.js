@@ -6,8 +6,6 @@ const confirmButton = document.querySelector('.confirm-btn');
 tables.forEach(function(tableLayout) {
    
     tableLayout.addEventListener('click', function() {
-        
-        
     
         const currentSelected = document.querySelector('.seating-arrangement.selected');
 
@@ -20,6 +18,15 @@ tables.forEach(function(tableLayout) {
         document.querySelector('.selected-list .selected-table').textContent = tableName;
         localStorage.setItem('selectedTable', tableName);
 
+        const tableElement = tableLayout.querySelector('.table');
+        let depositAmount = 0;
+
+        if (tableElement.classList.contains('two-seater')) {
+        depositAmount = 100;
+    } else if (tableElement.classList.contains('four-seater')) {
+    depositAmount = 200;
+    }
+        localStorage.setItem('depositAmount', depositAmount + ' Rs');
 
     })
 });

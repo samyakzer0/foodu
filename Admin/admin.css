@@ -169,3 +169,40 @@ img .pie-chart{
     font-size: 15px;
     outline: none;
 }
+
+.booking-table {
+    margin-top: 20px;
+    width: 100%;
+    border: 2px dashed orange;
+}
+
+.booking-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    text-align: left;
+}
+
+.booking-table th {
+    background-color: #c25d05;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+}
+
+
+.booking-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    color: #2b2b2b;
+}
+
+.booking-table tr:hover {
+    background-color: #fcfbfa;
+}
+
+.status-text {
+    color: #c25d05;
+    font-weight: bold;
+}

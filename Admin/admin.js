@@ -24,7 +24,6 @@ orderItems.forEach(item => {
     });
 });
 
-// Mock Booking Database
 const bookingsData = {
     "2026-07-05": [
         { table: "T3", time: "7:00 PM", status: "Confirmed" },
@@ -39,43 +38,22 @@ const bookingsData = {
     ]
 };
 
-// Retrieve live reservation details from localStorage (if any exists)
-const liveTable = localStorage.getItem('selectedTable');
-const liveTime = localStorage.getItem('selectedTime');
-
-if (liveTable && liveTime) {
-    // Dynamically insert the user's booking into today's list!
-    bookingsData["2026-07-05"].push({
-        table: liveTable,
-        time: liveTime,
-        status: "Confirmed (New)"
-    });
-}
-
 const dateSelect = document.getElementById('date');
-const bookingDetails = document.getElementById('booking-details');
+const bookingsTable = document.getElementById('bookings-table');
 
 dateSelect.addEventListener('change', function() {
     const selectedDate = dateSelect.value;
-    if (!selectedDate) {
-        bookingDetails.innerHTML = '<p style="color: #666; font-style: italic;">Choose a date to view bookings...</p>';
-        return;
-    }
-
     const bookings = bookingsData[selectedDate] || [];
-    if (bookings.length === 0) {
-        bookingDetails.innerHTML = '<p style="color: #666;">No bookings for this date.</p>';
-        return;
-    }
 
-    let html = '<ul style="list-style: none; padding: 0; margin-top: 10px; border-top: 1px solid #ddd;">';
+    let data = '';
     bookings.forEach(booking => {
-        html += `<li style="padding: 10px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; font-size: 15px; color: #2b2b2b;">
-            <span><strong>Table ${booking.table}</strong> &mdash; ${booking.time}</span>
-            <span style="color: #c25d05; font-weight: bold;">${booking.status}</span>
-        </li>`;
+        data += `<tr class="booking-row">
+            <td><strong>Table ${booking.table}</strong></td>
+            <td>${booking.time}</td>
+            <td class="status-text">${booking.status}</td>
+         </tr>`;
     });
-    html += '</ul>';
-    bookingDetails.innerHTML = html;
+    bookingsTable.innerHTML = data;
 });
+
 
