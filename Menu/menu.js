@@ -21,3 +21,21 @@ categoryButtons.forEach(function(button) {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const savedRestaurant = localStorage.getItem('selectedRestaurant');
+    if (savedRestaurant) {
+        const title = document.getElementById('restaurant-title');
+        if (title) {
+            title.textContent = savedRestaurant;
+        }
+    }
+});
+
+const bookTableBtn = document.querySelector('.book-table-btn');
+if (bookTableBtn) {
+    bookTableBtn.addEventListener('click', function() {
+        window.location.href = '../Booking/Table.html';
+    });
+}
+

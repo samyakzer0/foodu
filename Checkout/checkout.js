@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedTable = localStorage.getItem('selectedTable');
     const savedTime = localStorage.getItem('selectedTime');
     const savedDeposit = localStorage.getItem('depositAmount');
+    const savedRestaurant = localStorage.getItem('selectedRestaurant');
 
     if (savedTable) {
         document.getElementById('summary-table').textContent = savedTable;
@@ -37,9 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (savedTime) {
         document.getElementById('summary-time').textContent = savedTime;
     }
-
     if (savedDeposit) {
-    document.getElementById('summary-deposit').textContent = savedDeposit;
+        document.getElementById('summary-deposit').textContent = savedDeposit;
+    }
+    if (savedRestaurant) {
+        document.getElementById('summary-restaurant').textContent = savedRestaurant;
     }
 });
 
