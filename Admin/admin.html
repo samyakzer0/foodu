@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="admin.css">
+    <script src="admin.js" defer></script>
     <title>Admin Dashboard</title>
 </head>
 <body>
@@ -56,6 +57,42 @@
                         </ul>
                     </div>
                 </section>
+            </div>
+
+            <div class = "bookings">
+                <div class = "content">
+                    <h2>Bookings</h2>
+                    <p> Select date:</p>
+                    <select id="date">
+                        <option value="">Select Date</option>
+                        <option value="2026-07-05">July 5, 2026 (Today)</option>
+                        <option value="2026-07-06">July 6, 2026</option>
+                        <option value="2026-07-07">July 7, 2026</option>
+                    </select>
+    <div class = "booking-table">
+    <table>
+        <thead>
+            <tr>
+                <th>Table No</th>
+                <th>Time Slot</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="bookings-tbody">
+            <tr>
+                <td><strong>Table T3</strong></td>
+                <td>7:00 PM</td>
+                <td><span style="color: #c25d05; font-weight: bold;">Confirmed</span></td>
+            </tr>
+            <tr>
+                <td><strong>Table T1</strong></td>
+                <td>8:00 PM</td>
+                <td><span style="color: #c25d05; font-weight: bold;">Confirmed</span></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+                </div> 
             </div>
         </div>
    </main>

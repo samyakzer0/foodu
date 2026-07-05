@@ -7,6 +7,7 @@ tables.forEach(function(tableLayout) {
    
     tableLayout.addEventListener('click', function() {
         
+        
     
         const currentSelected = document.querySelector('.seating-arrangement.selected');
 
@@ -17,6 +18,7 @@ tables.forEach(function(tableLayout) {
 
          const tableName = tableLayout.querySelector('.table').textContent;
         document.querySelector('.selected-list .selected-table').textContent = tableName;
+        localStorage.setItem('selectedTable', tableName);
 
 
     })
@@ -33,6 +35,8 @@ timeSlots.forEach(function(slot) {
             currentActive.classList.remove('active');
         }
         slot.classList.add('active');
+        const selectedTime = slot.textContent;
+        localStorage.setItem('selectedTime', selectedTime); 
     });
 });
 
