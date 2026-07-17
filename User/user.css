@@ -135,7 +135,7 @@ background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcx
 }
 
 .right-top {
-    background-image: url('offers.png');
+    background-image: url('/images/User/offers.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -160,7 +160,7 @@ background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcx
 }
 
 .right-bottom {
-    background-image: url('menu.png');
+    background-image: url('/images/User/menu.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
