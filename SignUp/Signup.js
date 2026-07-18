@@ -28,5 +28,18 @@ signUpform.addEventListener("submit", function(submitEvent) {
         return;
     }
 
-    window.location.href = "../Admin/admin.html";
+    fetch('/api/signup',{
+        method : 'POST',
+        headers : {
+            'Content-Type' : 'application/json',
+        },
+        body : JSON.stringify({
+            email : emailValue,
+            password : passwordValue
+        })
+    })
+    .then(res => res.json(),window.location.href = "../Admin/admin.html")
+    .catch(err => {
+        console.log(err);
+    })
 });

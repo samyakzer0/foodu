@@ -24,36 +24,45 @@ orderItems.forEach(item => {
     });
 });
 
-const bookingsData = {
-    "2026-07-05": [
-        { table: "T3", time: "7:00 PM", status: "Confirmed" },
-        { table: "T1", time: "8:00 PM", status: "Confirmed" }
-    ],
-    "2026-07-06": [
-        { table: "T2", time: "6:00 PM", status: "Confirmed" },
-        { table: "T3", time: "9:00 PM", status: "Confirmed" }
-    ],
-    "2026-07-07": [
-        { table: "T1", time: "6:00 PM", status: "Confirmed" }
-    ]
-};
-
 const dateSelect = document.getElementById('date');
 const bookingsTable = document.getElementById('bookings-table');
 
-dateSelect.addEventListener('change', function() {
+let allBookings = [];
+
+function loadBookings() {
+    fetch('/api/bookings')
+        .then(res => res.json())
+        .then(data => {
+            allBookings = data;
+            renderBookings();
+        })
+        .catch(err => console.error('Error fetching bookings:', err));
+}
+
+function renderBookings() {
     const selectedDate = dateSelect.value;
-    const bookings = bookingsData[selectedDate] || [];
+    const bookings = allBookings.filter(booking => {
+        if (!selectedDate) return true;
+        const bookingDate = new Date(booking.createdAt).toISOString().split('T')[0];
+        return bookingDate === selectedDate;
+    });
 
     let data = '';
     bookings.forEach(booking => {
         data += `<tr class="booking-row">
-            <td><strong>Table ${booking.table}</strong></td>
-            <td>${booking.time}</td>
+            <td><strong>Table ${booking.table_no}</strong></td>
+            <td>${booking.restaurant}</td>
+            <td>${booking.email}</td>
+            <td>${booking.time_slot}</td>
             <td class="status-text">${booking.status}</td>
          </tr>`;
     });
-    bookingsTable.innerHTML = data;
-});
+    bookingsTable.innerHTML = data || '<tr><td colspan="5" style="text-align:center;">No bookings found</td></tr>';
+}
+
+dateSelect.addEventListener('change', renderBookings);
+
+document.addEventListener("DOMContentLoaded", loadBookings);
+
 
 
