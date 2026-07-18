@@ -35,12 +35,6 @@ upiForm.addEventListener("submit", function(submitEvent) {
             user_email: emailValue
         })
     })
-    .then(response => {
-        if (!response.ok) {
-            return response.json().then(err => { throw new Error(err.error || 'Booking failed'); });
-        }
-        return response.json();
-    })
     .then(data => {
         alert(data.message || "Payment Successful! Booking Confirmed.");
         localStorage.removeItem('selectedTable');
@@ -50,9 +44,7 @@ upiForm.addEventListener("submit", function(submitEvent) {
         window.location.href = "/admin";
     })
     .catch(err => {
-        alert(err.message || "Something went wrong.");
-        payButton.disabled = false;
-        payButton.textContent = "Pay & Confirm Booking";
+        alert("Something went wrong.");
     });
 });
 
@@ -62,18 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedDeposit = localStorage.getItem('depositAmount');
     const savedRestaurant = localStorage.getItem('selectedRestaurant');
 
-    if (savedTable) {
-        document.getElementById('summary-table').textContent = savedTable;
-    }
-    if (savedTime) {
-        document.getElementById('summary-time').textContent = savedTime;
-    }
-    if (savedDeposit) {
-        document.getElementById('summary-deposit').textContent = savedDeposit;
-    }
-    if (savedRestaurant) {
-        document.getElementById('summary-restaurant').textContent = savedRestaurant;
-    }
+    document.getElementById('summary-table').textContent = savedTable;
+    document.getElementById('summary-time').textContent = savedTime;
+    document.getElementById('summary-deposit').textContent = savedDeposit;
+    document.getElementById('summary-restaurant').textContent = savedRestaurant;
 });
 
 

@@ -29,14 +29,15 @@ const bookingsTable = document.getElementById('bookings-table');
 
 let allBookings = [];
 
-function loadBookings() {
-    fetch('/api/bookings')
-        .then(res => res.json())
-        .then(data => {
-            allBookings = data;
-            renderBookings();
-        })
-        .catch(err => console.error('Error fetching bookings:', err));
+async function fetchBookings(){
+    try {
+        const res = await fetch('/api/bookings');
+        const booking = await res.json();
+        allBookings = booking;
+        renderBookings();
+    } catch (err) {
+        console.error('Error fetching bookings:', err);
+    }
 }
 
 function renderBookings() {
@@ -62,7 +63,7 @@ function renderBookings() {
 
 dateSelect.addEventListener('change', renderBookings);
 
-document.addEventListener("DOMContentLoaded", loadBookings);
+document.addEventListener("DOMContentLoaded", fetchBookings);
 
 
 

@@ -42,10 +42,6 @@ app.get('/checkout', (req, res) => {
     res.sendFile(path.join(__dirname, 'Checkout', 'checkout.html'));
 });
 
-app.post('/api/signup',async(req,res)=>{
-    res.json({message:"User created successfully"});
-});
-
 app.post('/api/bookings',async(req,res)=>{
     try {
         const {restaurant,table_no,time_slot,deposit_amount,upi_id,user_email}=req.body;
@@ -66,17 +62,17 @@ app.post('/api/bookings',async(req,res)=>{
     }
 })
 
-app.get('/api/bookings', async (req, res) => {
+app.get('/api/bookings',async(req,res)=>{
     try {
         const bookings = await Booking.findAll({
             order: [['createdAt', 'DESC']]
         });
-        res.status(200).json(bookings);
+        res.json(bookings);
     } catch (err) {
-        console.error('Error fetching bookings:', err);
-        res.status(500).json({ error: 'Server error while fetching bookings.' });
+        console.error("Error fetching bookings:", err);
+        res.status(500).json({ error: "Failed to fetch bookings" });
     }
-});
+})
 
 
 sequelize.sync().then(()=>{ 
