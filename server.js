@@ -44,7 +44,7 @@ app.get('/checkout', (req, res) => {
 
 app.post('/api/bookings',async(req,res)=>{
     try {
-        const {restaurant,table_no,time_slot,deposit_amount,upi_id,user_email}=req.body;
+        const {restaurant,table_no,time_slot,deposit_amount,upi_id,email}=req.body;
 
         const booking = await Booking.create({
             restaurant,
@@ -52,7 +52,7 @@ app.post('/api/bookings',async(req,res)=>{
             time_slot,
             deposit_amount,
             upi_id,
-            email:user_email,
+            email,
         });
 
         res.status(201).json({message:"Booking created successfully",booking});

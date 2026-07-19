@@ -32,7 +32,7 @@ upiForm.addEventListener("submit", function(submitEvent) {
             time_slot: savedTime,
             deposit_amount: savedDeposit,
             upi_id: upiValue,
-            user_email: emailValue
+            email: emailValue
         })
     })
     .then(data => {
