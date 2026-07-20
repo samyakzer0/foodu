@@ -90,6 +90,29 @@ background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcx
     margin-top: 31px;                  
 }
 
+@media (max-width:768px){
+    .bento-section{
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .hero {
+        align-items: flex-start;
+        height: auto;
+    }
+    .table-img {
+        position: relative;
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        align-self: center;
+        margin-top: 20px;
+    }
+    .hero h1, .right-top h2, .right-bottom h2 {
+        font-size: 28px;
+        max-width: 100%;
+    }
+}
+
 .bento-section .content {
     display: flex;
     flex-direction: column;

@@ -24,7 +24,6 @@ orderItems.forEach(item => {
     });
 });
 
-const dateSelect = document.getElementById('date');
 const bookingsTable = document.getElementById('bookings-table');
 
 let allBookings = [];
@@ -41,15 +40,9 @@ async function fetchBookings(){
 }
 
 function renderBookings() {
-    const selectedDate = dateSelect.value;
-    const bookings = allBookings.filter(booking => {
-        if (!selectedDate) return true;
-        const bookingDate = new Date(booking.createdAt).toISOString().split('T')[0];
-        return bookingDate === selectedDate;
-    });
 
     let data = '';
-    bookings.forEach(booking => {
+    allBookings.forEach(booking => {
         data += `<tr class="booking-row">
             <td><strong>Table ${booking.table_no}</strong></td>
             <td>${booking.restaurant}</td>
@@ -61,7 +54,7 @@ function renderBookings() {
     bookingsTable.innerHTML = data || '<tr><td colspan="5" style="text-align:center;">No bookings found</td></tr>';
 }
 
-dateSelect.addEventListener('change', renderBookings);
+
 
 document.addEventListener("DOMContentLoaded", fetchBookings);
 
