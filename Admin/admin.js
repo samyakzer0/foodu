@@ -1,19 +1,5 @@
 
-const searchInput = document.querySelector('.search input');
 const orderItems = document.querySelectorAll('.recent-orders-list li');
-
-searchInput.addEventListener('input', function() {
-    const filterText = searchInput.value.toLowerCase();
-    
-    orderItems.forEach(item => {
-        const orderText = item.textContent.toLowerCase();
-        if (orderText.includes(filterText)) {
-            item.style.display = '';
-        } else {
-            item.style.display = 'none';
-        }
-    });
-});
 
 orderItems.forEach(item => {
     item.addEventListener('click', () => {
